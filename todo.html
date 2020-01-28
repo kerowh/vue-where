@@ -14,7 +14,10 @@
         <button @click="handel">提交</button>
         <ul>
 <!--            <li v-for="item in list">{{item}}</li>-->
-            <todo-item v-for="item in list" :content="item"></todo-item>
+            <todo-item v-for="(item,index) in list"
+                       :index="index"
+                       :content="item"
+                       @delete="deleteItem"></todo-item>
         </ul>
     </div>
 </body>
@@ -26,8 +29,13 @@
     // })
 
     var TodoItem ={
-        props:['content'],
-        template:"<li>{{content}}</li>"
+        props:['content','index'],
+        template:"<li @click='ItemClick'>{{content}}</li>",
+        methods: {
+            ItemClick:function() {
+                this.$emit('delete',this.index)
+            }
+        }
     }
 
     var app = new Vue({
@@ -43,6 +51,9 @@
             handel:function () {
                 this.list.push(this.text)
                 this.text = ''
+            },
+            deleteItem:function (index) {
+                this.list.splice(index,1)
             }
         }
     })

@@ -11,24 +11,30 @@
 <body>
     <div id="app">
         <input type="text" v-model="text">
-        <button v-on:click="handle">{{content}}</button>
+        <button @click="handel">提交</button>
         <ul>
-            <li v-for="item in list">{{item}}</li>
+<!--            <li v-for="item in list">{{item}}</li>-->
+            <todo-item v-for="item in list" :content="item"></todo-item>
         </ul>
     </div>
 </body>
 <script>
+
+    Vue.component("TodoItem",{
+        props:['content'],
+        template:"<li>{{content}}</li>"
+    })
+
     var app = new Vue({
         el:'#app',
         data:{
-            content:'提交',
             list:[],
             text:''
         },
         methods:{
-            handle:function () {
+            handel:function () {
                 this.list.push(this.text)
-                this.text=''
+                this.text = ''
             }
         }
     })

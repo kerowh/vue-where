@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <title>作用域插槽的使用</title>
+</head>
+<body>
+    <div id="app">
+        <child>
+            <template slot-scope="props">
+                <h1>{{props.xxx}}</h1>
+            </template>
+        </child>
+    </div>
+</body>
+<script>
+
+    Vue.component('child',{
+        data(){
+          return {
+              list:[1,2,3,4]
+          }
+        },
+        template: `<div>
+                        <ul>
+                            <slot v-for="item of list" :xxx="item"></slot>
+                        </ul>
+                    </div>`
+    })
+
+
+    var app = new Vue({
+        el:'#app',
+        data:{
+            message : 'Hello World'
+        }
+    })
+</script>
+</html>

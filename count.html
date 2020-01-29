@@ -10,8 +10,10 @@
 </head>
 <body>
     <div id="app">
+        <div slot="header">header</div>
         <child content="wang"></child>
         <child content="hai"></child>
+        <div slot="footer">footer</div>
     </div>
 </body>
 <script>
@@ -19,7 +21,12 @@
    Vue.prototype.bus = new Vue()
 
    Vue.component('child',{
-       template:'<div @click="handleClick">{{self}}</div>',
+       template:`<div>
+                    <slot name="header"></slot>
+                    <div @click="handleClick">{{self}}</div>
+                    <slot name="footer"></slot>
+                </div>
+                `,
        props:{
            content:String
        },

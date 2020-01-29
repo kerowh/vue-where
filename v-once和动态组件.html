@@ -14,6 +14,7 @@
 <!--    <child-two v-if="type === 'two'"></child-two>-->
     <component :is="type"></component>
     <button @click="change">change</button>
+<!--    <strong>v-once指令</strong>:只渲染元素和组件一次, 这可以用优化更新性能. 执行一次性地插值，当数据改变时，插值处的内容不会更新。-->
 </div>
 </body>
 <script>

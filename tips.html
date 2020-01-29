@@ -5,13 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>计数器功能的实现</title>
+    <title>父子组件传值的应用</title>
     <script src="vue.js"></script>
 </head>
 <body>
     <div id="app">
-        <counter ref="one" @add="count"></counter>
-        <counter ref="two" @add="count"></counter>
+        <counter :number="2" ref="one" @add="count"></counter>
+        <counter :number="3" ref="two" @add="count"></counter>
         <div>{{total}}</div>
     </div>
 </body>
@@ -19,9 +19,10 @@
 
     Vue.component('counter',{
         template:'<div @click="add">{{content}}</div>',
+        props:['number'],
         data(){
             return {
-                content: 0
+               content:this.number
             }
         },
         methods: {

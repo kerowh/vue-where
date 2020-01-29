@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddba51e1-511e-459d-88c2-29917934eb0a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tips.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classStudy.html" beforeDir="false" afterPath="$PROJECT_DIR$/classStudy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tips.html" beforeDir="false" afterPath="$PROJECT_DIR$/tips.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -56,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tips.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+            <state relative-caret-position="48">
+              <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -154,7 +153,7 @@
       <updated>1580203159871</updated>
       <workItem from="1580203161021" duration="9208000" />
       <workItem from="1580257430221" duration="6791000" />
-      <workItem from="1580283289021" duration="2581000" />
+      <workItem from="1580283289021" duration="3912000" />
     </task>
     <task id="LOCAL-00001" summary="hello world">
       <created>1580204373564</created>
@@ -212,11 +211,18 @@
       <option name="project" value="LOCAL" />
       <updated>1580284001703</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ref的用法，父子组件通信的复习">
+      <created>1580286287143</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1580286287143</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18580000" />
+    <option name="totallyTimeSpent" value="19911000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -254,7 +260,8 @@
     <MESSAGE value="计算属性的学习" />
     <MESSAGE value="使用数组的形式来改变样式" />
     <MESSAGE value="组件化的小tips，is的使用" />
-    <option name="LAST_COMMIT_MESSAGE" value="组件化的小tips，is的使用" />
+    <MESSAGE value="ref的用法，父子组件通信的复习" />
+    <option name="LAST_COMMIT_MESSAGE" value="ref的用法，父子组件通信的复习" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
@@ -303,8 +310,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tips.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+        <state relative-caret-position="48">
+          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
         </state>
       </provider>
     </entry>

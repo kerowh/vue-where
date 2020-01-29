@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+<!--    <child-one v-if="type === 'one'"></child-one>-->
+<!--    <child-two v-if="type === 'two'"></child-two>-->
+    <component :is="type"></component>
+    <button @click="change">change</button>
+</div>
+</body>
+<script>
+
+    Vue.component('one',{
+        template: `<div>one</div>`
+    })
+
+    Vue.component('two',{
+        template: `<div>two</div>`
+    })
+
+
+    var app = new Vue({
+        el:'#app',
+        data:{
+            type:'one'
+        },
+        methods:{
+            change:function () {
+                this.type = this.type==='one'?'two':'one'
+            }
+        }
+    })
+</script>
+</html>

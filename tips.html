@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计数器功能的实现</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <counter ref="one" @add="count"></counter>
+        <counter ref="two" @add="count"></counter>
+        <div>{{total}}</div>
+    </div>
+</body>
+<script>
+
+    Vue.component('counter',{
+        template:'<div @click="add">{{content}}</div>',
+        data(){
+            return {
+                content: 0
+            }
+        },
+        methods: {
+            add:function () {
+                this.content++
+                this.$emit('add')
+            }
+        }
+    })
+
+    var app = new Vue({
+        el:'#app',
+        data:{
+            total:0
+        },
+        methods:{
+            count: function () {
+                this.total = this.$refs.one.content + this.$refs.two.content
+            }
+        }
+    })
+</script>
+</html>

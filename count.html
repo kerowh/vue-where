@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <child content="wang"></child>
+        <child content="hai"></child>
+    </div>
+</body>
+<script>
+
+   Vue.prototype.bus = new Vue()
+
+   Vue.component('child',{
+       template:'<div @click="handleClick">{{self}}</div>',
+       props:{
+           content:String
+       },
+       data(){
+           return {
+               self:this.content
+           }
+       },
+       methods: {
+           handleClick:function () {
+               console.log(this.self);
+               this.bus.$emit('change',this.content)
+           }
+       },
+       mounted:function () {
+           let _this = this
+           this.bus.$on('change',function (msg) {
+               _this.self = msg
+           })
+       }
+   })
+
+    var app = new Vue({
+        el:'#app',
+        data:{},
+        methods:{}
+    })
+</script>
+</html>

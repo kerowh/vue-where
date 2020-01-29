@@ -19,7 +19,11 @@
 
     Vue.component('counter',{
         template:'<div @click="add">{{content}}</div>',
-        props:['number'],
+        props:{
+            'number':{
+                required:false
+            }
+        },
         data(){
             return {
                content:this.number
@@ -28,6 +32,7 @@
         methods: {
             add:function () {
                 this.content++
+                console.log(typeof this.content);
                 this.$emit('add')
             }
         }
@@ -36,10 +41,16 @@
     var app = new Vue({
         el:'#app',
         data:{
-            total:0
+            total:''
         },
+        // computed:{
+        //   change:function () {
+        //       return this.total
+        //   }
+        // },
         methods:{
             count: function () {
+                console.log("2的"+typeof this.$refs.two.content);
                 this.total = this.$refs.one.content + this.$refs.two.content
             }
         }

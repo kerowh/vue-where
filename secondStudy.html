@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{fullName}}
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            firstName:"Wang",
+            lastName:"Hai"
+        },
+        computed:{
+            fullName:{
+                get:function(){
+                    console.log('计算了一次');
+                    return this.firstName+" "+this.lastName
+                },
+                set:function (value) {
+                    console.log('当computed属性中的fullname发生改变时才会调用');
+                    var arr = value.split(" ")
+                    console.log(arr);
+                    this.firstName = arr[0]
+                    this.lastName = arr[1]
+                    console.log(value);
+                }
+            }
+        }
+    })
+</script>
+</html>

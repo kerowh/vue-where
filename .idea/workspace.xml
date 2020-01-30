@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddba51e1-511e-459d-88c2-29917934eb0a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/list的循环.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vue的动画封装.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/过渡动画.html" beforeDir="false" afterPath="$PROJECT_DIR$/过渡动画.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -74,17 +73,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/过渡动画.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state>
+              <caret selection-end-line="61" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vue的动画封装.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/list的循环.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+            <state relative-caret-position="744">
+              <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -118,8 +126,9 @@
         <option value="$PROJECT_DIR$/keyframe实现动画效果.html" />
         <option value="$PROJECT_DIR$/lianxi.js" />
         <option value="$PROJECT_DIR$/使用js来完成动画.html" />
-        <option value="$PROJECT_DIR$/list的循环.html" />
         <option value="$PROJECT_DIR$/过渡动画.html" />
+        <option value="$PROJECT_DIR$/list的循环.html" />
+        <option value="$PROJECT_DIR$/Vue的动画封装.html" />
       </list>
     </option>
   </component>
@@ -197,7 +206,7 @@
       <workItem from="1580257430221" duration="6791000" />
       <workItem from="1580283289021" duration="15968000" />
       <workItem from="1580346257468" duration="7596000" />
-      <workItem from="1580364933224" duration="5768000" />
+      <workItem from="1580364933224" duration="6549000" />
     </task>
     <task id="LOCAL-00001" summary="hello world">
       <created>1580204373564</created>
@@ -325,11 +334,18 @@
       <option name="project" value="LOCAL" />
       <updated>1580369229282</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="list循环的动画添加">
+      <created>1580371578894</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1580371578894</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45331000" />
+    <option name="totallyTimeSpent" value="46112000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -342,7 +358,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14002642" />
@@ -386,7 +402,8 @@
     <MESSAGE value="vue动画的实现" />
     <MESSAGE value="过渡与动画的同时使用" />
     <MESSAGE value="使用js实现渐变的效果" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用js实现渐变的效果" />
+    <MESSAGE value="list循环的动画添加" />
+    <option name="LAST_COMMIT_MESSAGE" value="list循环的动画添加" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/VueTips.html" />
@@ -490,17 +507,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/过渡动画.html">
+    <entry file="file://$PROJECT_DIR$/list的循环.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="744">
+          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list的循环.html">
+    <entry file="file://$PROJECT_DIR$/过渡动画.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        <state>
+          <caret selection-end-line="61" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue的动画封装.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
         </state>
       </provider>
     </entry>

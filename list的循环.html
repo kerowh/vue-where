@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.css">
+    <script src="vue.js"></script>
+    <style>
+        .fade-enter,.fade-leave-to{
+            opacity: 0;
+        }
+        .enter,.leave{
+            transition: opacity 1s;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <transition-group name="fade" enter-active-class="enter" leave-active-class="leave">
+        <div v-for="item of list" :key="item.id">{{item.title}}---{{item.id}}</div>
+    </transition-group>
+    <button @click="add">添加</button>
+</div>
+</body>
+<script>
+
+    var count = 0
+
+    var app = new Vue({
+        el:'#app',
+        data:{
+            list:[]
+        },
+        methods:{
+            add:function () {
+                count++
+                this.list.push({
+                    id:count,
+                    title:"hello world"
+                })
+            }
+        }
+    })
+</script>
+</html>

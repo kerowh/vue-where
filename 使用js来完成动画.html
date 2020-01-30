@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <transition name="fade"
+                @before-enter="handleBefore"
+                @enter="handleEnter"
+                @after-enter="handleAfter"
+                >
+        <div v-if="show">hello</div>
+    </transition>
+    <button @click="handelClick">show</button>
+</div>
+</body>
+<script>
+    var app = new Vue({
+        el:'#app',
+        data:{
+            show:true
+        },
+        methods:{
+            handelClick:function () {
+                this.show = !this.show
+            },
+            handleBefore:function (el) {
+                el.style.opacity = '0'
+            },
+            handleEnter:function (el,done) {
+                let start=0
+                var timer=setInterval(()=>{
+                    start+=0.1
+                    el.style.opacity = start
+                    if (start>=1){
+                        clearInterval(timer)
+                        done()
+                    }
+                },100)
+            },
+            handleAfter:function (el) {
+                alert('结束了')
+            }
+        }
+    })
+</script>
+</html>
